@@ -1,0 +1,28 @@
+{
+  "name": "sway-cli",
+  "description": "Command line interface for sway.",
+  "version": "0.0.1",
+  "bin": {
+    "sway": "index.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohammad Ahmadi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m-ahmadi/sway-cli.git"
+  },
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "fs-extra": "^2.1.2",
+    "line-by-line": "^0.1.5",
+	"readline-sync": "^1.4.7",
+    "shelljs": "^0.7.7",
+    "util-ma": "^1.0.9"
+  }
+}

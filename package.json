@@ -1,5 +1,5 @@
 {
-  "name": "sway-cli",
+  "name": "kart-cli",
   "description": "Command line interface for sway.",
   "version": "0.0.1",
   "bin": {

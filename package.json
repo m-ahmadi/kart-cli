@@ -3,7 +3,7 @@
   "description": "Command line interface for sway.",
   "version": "0.0.1",
   "bin": {
-    "sway": "index.js"
+    "kart": "index.js"
   },
   "preferGlobal": true,
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "Mohammad Ahmadi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/m-ahmadi/sway-cli.git"
+    "url": "https://github.com/m-ahmadi/kart-cli.git"
   },
   "license": "MIT",
   "devDependencies": {},

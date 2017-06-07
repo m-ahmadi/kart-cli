@@ -9,8 +9,8 @@ const DS = path.sep;
 const DL = path.delimiter;
 const log = console.log;
 const d = __dirname + DS;
+let conf;
 
-const conf = require("./parseConfig")();
 const r = " --color";
 const commands = {};
 c["html"]    = "gulp html"+r;
@@ -27,6 +27,12 @@ c["live"]    = "gulp livereload"+r;
 const env = require("./env");
 const liber = require("./liberate");
 const checkCwd = require("./checkcwd");
+
+if ( checkCwd() ) {
+	conf = require("./parseConfig")();
+	require("./commandGenerator")(conf);
+}
+debugger
 
 m.usage("command [options]");
 m.version(""+ JSON.parse(fs.readFileSync(d+"package.json", "utf8")).version, "-v, --version");

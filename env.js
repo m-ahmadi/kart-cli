@@ -1,7 +1,6 @@
 const c = require("colors");
 const fs = require("fs");
 const log = console.log;
-const envsList = Object.keys( require("./parseConfig")().envs );
 
 const succ = c.green.bold("✔");
 const fail = c.red.bold("✖");
@@ -11,6 +10,7 @@ const bg = c.black.bgWhite;
 module.exports = function (envName) {
 	if ( !require("./checkcwd")() ) return;
 	
+	const envsList = Object.keys( require("./parseConfig")().envs );
 	let p = "./.kart/env";
 	if (envName) {
 		if ( envsList.indexOf(envName) !== -1 ) {

@@ -20,7 +20,7 @@ function isInit() {
 function init() {
 	fs.ensureDirSync(dir);
 	fs.copySync("./node_modules/kart/skeleton/", "./", {overwrite: false});
-	fs.writeFileSync("./.kart/init", "1", "uff8");
+	fs.writeFileSync("./.kart/init", "1", "utf8");
 	fs.writeFileSync("./.gitignore", ignores.join("\n"), "utf8");
 }
 

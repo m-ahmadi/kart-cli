@@ -7,7 +7,7 @@ const fail = c.red.bold("✖");
 const main = c.magenta;
 const bg = c.black.bgWhite;
 
-module.exports = function (envName) {
+module.exports = envName => {
 	if ( !require("./checkcwd")() ) return;
 	
 	const envsList = Object.keys( require("./parseConfig")().envs );
@@ -17,10 +17,11 @@ module.exports = function (envName) {
 			fs.writeFileSync(p, envName);
 			log( succ, main("Switched to:"), bg(` ${envName} `), main("environment.") );
 		} else {
-			log( fail, main("Unknown environment:"), c.yellow(envName), `\n [${envsList.join("|")}]`  );
+			log( fail, main("Unknown environment:"), c.yellow(envName), c.cyan("\n Available options:"), `\n [${envsList.join(" | ")}]`  );
 		}
 	} else {
 		const v = fs.readFileSync(p, "utf8");
 		log( main("Current environment:"), bg(` ${v} `) );
+		return ""+v;
 	}
 };

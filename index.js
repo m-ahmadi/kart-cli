@@ -30,7 +30,7 @@ const checkCwd = require("./checkcwd");
 
 if ( checkCwd() ) {
 	conf = require("./parseConfig")();
-	require("./commandGenerator")(conf);
+	// require("./commandGenerator")( conf, env() );
 }
 debugger
 
